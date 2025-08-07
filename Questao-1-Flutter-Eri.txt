@@ -1,0 +1,19 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return  MaterialApp(
+      
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(appBar: AppBar(
+         title: Text('Questão 1: Card simples com título e descrição')),body: Center(child: Text('Olá, mundo!', style: TextStyle(fontSize: 24),),),),
+    );
+  }
+}

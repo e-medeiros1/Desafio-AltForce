@@ -1,0 +1,85 @@
+void main() {
+  print('Questão 1:');
+  print('A soma dos dois número é: ${somar(a: 2, b: 2)}\n');
+  print('Questão 2:');
+  print('O número é: ${par(2)}\n');
+  print('Questão 3:');
+  print('A multiplicação dos dois número é: ${multiplicacao(num1: 5, num2: 5)}\n');
+  print('Questão 4:');
+  print('O dobro do número é: ${dobro(num1: 5)}\n');
+  print('Questão 5:');
+  print(
+    'O nome completo desse usuário é: ${nomeCompleto(nome: 'Eri ', sobrenome: 'Medeiros')}\n',
+  );
+  print('Questão 6:');
+  print('O número maior é: ${numeroMaior(num1: 2, num2: 5)}\n');
+  print('Questão 7:');
+  print('O número total de itens dessa lista é: ${contarItens([1, 2, 4, 5, 5])}');
+  print('Questão 8:');
+  print('A soma dos três primeiros itens é: ${contarPrimeirosItens([1, 2, 3, 5, 5])}\n');
+  print('Questão 9:');
+  print('A média entre os números é: ${calcularMedia()}\n');
+  print('Questão 10:');
+  print('O usuário é: ${calculaIdade(idade: 25)}\n');
+}
+
+// 1. Soma de dois números
+int somar({int a = 0, int b = 0}) {
+  return a + b;
+}
+
+//2. Verificar se é par ou ímpar
+par(int num) {
+  if (num % 2 == 0) {
+    return 'É par';
+  }
+  return 'É ímpar';
+}
+
+//3. Multiplicação simples
+multiplicacao({int num1 = 0, int num2 = 0}) {
+  return num1 * num2;
+}
+
+//4. Dobro do número
+dobro({int num1 = 0}) {
+  return num1 * 2;
+}
+
+//5. Concatenar nomes
+String nomeCompleto({String nome = '', String sobrenome = ''}) {
+  return nome + sobrenome;
+}
+
+//6. Verificar maior número entre dois
+int numeroMaior({int num1 = 0, int num2 = 0}) {
+  if (num1 > num2) {
+    return num1;
+  } else {
+    return num2;
+  }
+}
+
+//7. Contar elementos de uma lista
+int contarItens(List<int> itens) {
+  return itens.length;
+}
+
+//8. Soma dos três primeiros números
+int contarPrimeirosItens(List<int> itens) {
+  return itens[0] + itens[1] + itens[2];
+}
+//9. Calcular média simples
+
+double calcularMedia({double nota1 = 10.0, double nota2 = 10.0, double nota3 = 10.0}) {
+  return (nota1 + nota2 + nota3) / 3;
+}
+
+//10. Verificar idade mínima
+String calculaIdade({int idade = 0}) {
+  if (idade > 18) {
+    return 'Maior de idade';
+  } else {
+    return 'Menor de idade';
+  }
+}
